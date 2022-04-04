@@ -1,0 +1,15 @@
+<h1>New Post</h1>
+
+<%= form_with url: posts_path, local: true do |f| %>
+    <div class="form-group">
+      <%= f.label :title%>
+      <%= f.text_field :title, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :descriptopn %>
+      <%= f.text_area :description, class: 'form-control' %>
+    </div>
+    <div class="actions">
+      <%= f.submit 'Create Post', class: 'btn btn-primary' %>
+    </div>
+    <% end %>
